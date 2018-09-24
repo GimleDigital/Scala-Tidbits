@@ -5,3 +5,6 @@ Some basic code examples for Economics and Finance Open Source Software.
    A library for calculating the yield to maturity for aplain vanilla bonds.
 
 2. TBA
+
+Each example is a separate Scala application. Navegate to its directory
+(for example bondcalc) and run it with sbt.
