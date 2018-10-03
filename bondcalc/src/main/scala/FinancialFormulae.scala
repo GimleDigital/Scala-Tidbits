@@ -2,9 +2,9 @@ package com.gimledigital.bondcalc
 
 import scala.math._
 
-/** 
+/**
  * This trait provides some standard financial formulas.
- * 
+ *
  * No class methods or types are required for mixing in the trait.
  */
 trait FinancialFormulae {
@@ -16,8 +16,8 @@ trait FinancialFormulae {
    */
   def capitalize (r: Double, t: Int): Double = {
     val factor = 1 + r/100
-	if (t == 1) factor
-	else factor * capitalize(r, t-1)
+    if (t == 1) factor
+    else factor * capitalize(r, t-1)
   }
   /** Returns the discount factor for calculating the present value of a single
    *  cash flow.
@@ -27,8 +27,8 @@ trait FinancialFormulae {
    */
   def discount(r: Double, t: Int): Double = {
     val factor = 1/(1 + r/100)
-	if (t == 1) factor
-	else factor * discount(r, t-1)
+    if (t == 1) factor
+    else factor * discount(r, t-1)
   }
   /** Returns the capitalization factor for calculating the future value of a
    *  series of identical cash flows.
@@ -67,9 +67,9 @@ trait FinancialFormulae {
    */
   def cashFlowsPV(r: Double, cf: Seq[Double]): Double = {
     val idx = cf.indices.map(_ + 1)
-	val values: Seq[Double] =  (cf zip idx) map { case (c, t) => 
-	  c * discount(r, t)
+    val values: Seq[Double] =  (cf zip idx) map { case (c, t) =>
+      c * discount(r, t)
     }
-	values.foldLeft(0.0)(_ + _)
+    values.foldLeft(0.0)(_ + _)
   }
 }

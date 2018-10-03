@@ -16,21 +16,21 @@ case class VanillaBond(principal: Double, couponRate: Double, periods: Int)
   /* Returns the discounted value of the bond's cash flows.
    *
    * @param r the interest rate used for discounting
-   */  
+   */
   def netPresentValue(r: Double): Double = {
     cashFlowsPV(r, cashflows)
   }
-  
+
   /* Recursive function that returns the bond's yield to maturity. If the discounted
    * value of the cash flows equals the initial payment, the current yield is correct.
    * If not, we make another recursive call to try with a slightly higher yield.
    *
    * Param@ p the price of the bond
-   * Param@ y the suggested yield 
+   * Param@ y the suggested yield
    */
   @tailrec final def priceToYield(p: Double, y: Double): Double = {
     val fv: Double = p / 100 * principal
     if (netPresentValue(y) - fv < 0.01) y
-	else  priceToYield(p , y + 0.00001)
-  } 
+    else  priceToYield(p , y + 0.00001)
+  }
 }
