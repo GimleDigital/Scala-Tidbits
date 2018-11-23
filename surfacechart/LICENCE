@@ -1,0 +1,22 @@
+A simple example program, with a GUI, that displays a function in a3D chart.
+
+The code is based on an example found at https://stackoverflow.com/questions/
+31073007/how-to-create-a-3d-surface-chart-with-javafx and has been simplified
+and ported to ScalaFx.
+
+Copyright (C) 2018 Gimlé Digital & Mikael Berger
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Contact information: E-mail mikaelberger@gimledigital.com
