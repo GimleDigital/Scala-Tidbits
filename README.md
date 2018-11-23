@@ -13,7 +13,10 @@ Some basic code examples for Economics and Finance Open Source Software.
 4. Newton-Raphson method (directory newtonraphson)
    An app that resolves equation systems with the Newton-Raphson method.
 
-5. TBA
+5. Surface Chart (directory surfacechart)
+   An app that draws a three-dimensional surface graph for a function.
+
+6. TBA
 
 Each example is a separate Scala application. Navegate to its directory
 (for example bondcalc), compile and run with sbt.
